@@ -82,7 +82,47 @@ merge conflicts across multiple branches using proper Git workflows.
 
 ### Merge 2: main + conflict-simulator (6 files)
 
-[Document the second set of conflicts similarly]
+### Conflict 1: config/app-config.yaml
+- **Issue**: Experimental configs conflicted with production settings.
+- **Resolution**: Combined both with environment toggle for experimental mode.
+- **Strategy**: Kept production as base, added experimental flags as optional.
+- **Difficulty**: Medium
+- **Time**: 12 minutes
+
+### Conflict 2: config/database-config.json
+- **Issue**: Different database tuning and cache options.
+- **Resolution**: Unified schema, added experimental tuning under new section.
+- **Strategy**: Preserved stable DB config, isolated experimental changes.
+- **Difficulty**: Medium
+- **Time**: 10 minutes
+
+### Conflict 3: scripts/deploy.sh
+- **Issue**: Experimental deploy logic overwrote stable commands.
+- **Resolution**: Added conditional block to handle both modes.
+- **Strategy**: Used environment flag to switch between stable and test deployments.
+- **Difficulty**: Hard
+- **Time**: 20 minutes
+
+### Conflict 4: scripts/monitor.js
+- **Issue**: Advanced debug logs conflicted with clean production logs.
+- **Resolution**: Merged both using mode-based logging system.
+- **Strategy**: Activated verbose logs only in experimental mode.
+- **Difficulty**: Medium
+- **Time**: 15 minutes
+
+### Conflict 5: docs/architecture.md
+- **Issue**: Overlapping architecture details and headings.
+- **Resolution**: Integrated both with separate “Experimental Enhancements” section.
+- **Strategy**: Preserved structure, appended new updates at the end.
+- **Difficulty**: Easy
+- **Time**: 8 minutes
+
+### Conflict 6: README.md
+- **Issue**: Mixed experimental and stable setup instructions.
+- **Resolution**: Combined content and clarified experimental usage notes.
+- **Strategy**: Separated instructions under “Stable” and “Experimental” headers.
+- **Difficulty**: Easy
+- **Time**: 10 minutes
 
 ## Most Challenging Parts
 
